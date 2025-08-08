@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lucas Perez | Portfolio</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link
+      rel="shortcut icon"
+      href="../img/icons/happy.png"
+      type="image/x-icon"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a class="anchor-menu" href="#sobre-mi">Sobre mi</a></li>
+        <li><a class="anchor-menu" href="#habilidades">Habilidades</a></li>
+        <li><a class="anchor-menu" href="#proyectos">Proyectos</a></li>
+        <li><a class="anchor-menu" href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <div class="img-container">
+        <img src="../img/1180423327.jpg" alt="" />
+      </div>
+      <h1 class="my-name">Lucas Perez</h1>
+      <h2 class="my-description">Desarrollador frontend</h2>
+
+      <div class="button-group">
+        <a
+          class="icon-button"
+          href="../pdf/Lucas Perez - CV Curriculum Vitae.pdf"
+          download
+          title="Descargar CV"
+          ><img src="../img/icons/download-svgrepo-com.svg" alt="" />
+        </a>
+        <a
+          class="icon-button"
+          href="https://github.com/Lucas-Perez01"
+          target="_blank"
+          title="GitHub"
+          ><img src="../img/icons/github-svgrepo-com.svg" alt="" />
+        </a>
+        <a
+          class="icon-button"
+          href="https://www.linkedin.com/in/lucas-elias-perez/"
+          target="_blank"
+          title="LinkedIn"
+          ><img src="../img/icons/linkedin-svgrepo-com.svg" alt="" />
+        </a>
+      </div>
+
+      <section id="sobre-mi">
+        <div class="title-container">
+          <h2 class="subtitle">
+            <img
+              class="subtitle-icon"
+              src="../img/icons/coding-programming-language-svgrepo-com.svg"
+              alt=""
+            />Sobre mí
+          </h2>
+          <p id="text-about-me">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem,
+            corporis vitae mollitia reprehenderit aspernatur sed, eos quibusdam
+            ratione provident reiciendis dolores magnam temporibus possimus
+            eligendi veritatis deserunt asperiores voluptatum voluptate.
+          </p>
+        </div>
+      </section>
+
+      <section id="habilidades">
+        <div class="title-container">
+          <h2 class="subtitle">Habilidades Técnicas</h2>
+        </div>
+
+        <div class="skill-group">
+          <h3 class="skill-subtitle">Frontend</h3>
+          <div class="skill-container">
+            <div class="skill-box">
+              <img src="../img/icons/html-5-svgrepo-com.svg" alt="HTML5" />
+              <p>HTML5</p>
+            </div>
+            <div class="skill-box">
+              <img src="../img/icons/css-3-svgrepo-com.svg" alt="CSS3" />
+              <p>CSS3</p>
+            </div>
+            <div class="skill-box">
+              <img src="../img/icons/javascript-svgrepo-com.svg" alt="HTML5" />
+              <p>JavaScript</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h3 class="skill-subtitle">Backend</h3>
+          <div class="skill-container">
+            <div class="skill-box">
+              <img
+                src="../img/icons/nodejs-icon-svgrepo-com.svg"
+                alt="Node.js"
+              />
+              <p>Node.js</p>
+            </div>
+            <div class="skill-box">
+              <img src="../img/icons/express-svgrepo-com.svg" alt="HTML5" />
+              <p>Express.js</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h3 class="skill-subtitle">Bases de datos</h3>
+          <div class="skill-container">
+            <div class="skill-box">
+              <img src="../img/icons/mysql-svgrepo-com.svg" alt="Git" />
+              <p>MySQL</p>
+            </div>
+            <div class="skill-box">
+              <img src="../img/icons/mongo-svgrepo-com.svg" alt="Git" />
+              <p>MongoDB</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h3 class="skill-subtitle">Herramientas</h3>
+          <div class="skill-container">
+            <div class="skill-box">
+              <img src="../img/icons/git-svgrepo-com.svg" alt="Git" />
+              <p>Git</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="proyectos">
+        <div class="title-container">
+          <h2 class="subtitle">
+            <img
+              class="subtitle-icon"
+              src="../img/icons/rocket-svgrepo-com.svg"
+              alt="Ícono contacto"
+            />
+            Proyectos
+          </h2>
+        </div>
+        <div class="card-wrapper"></div>
+      </section>
+
+      <section id="contacto">
+        <div class="title-container">
+          <h2 class="subtitle">
+            <img
+              class="subtitle-icon"
+              src="../img/icons/gmail-svgrepo-com.svg"
+              alt="Ícono contacto"
+            />
+            Contacto
+          </h2>
+        </div>
+        <form action="">
+          <label for="email">Correo electrónico</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="asunto">Asunto</label>
+          <input type="text" id="asunto" name="asunto" />
+
+          <label for="message">Mensaje:</label>
+          <textarea id="message" name="message" rows="4"></textarea>
+
+          <button type="submit">Enviar</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <div>
+        <p>&copy; 2023 Lucas Perez. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+
+    <script type="module" src="../scripts/insertCard.js"></script>
+  </body>
+</html>

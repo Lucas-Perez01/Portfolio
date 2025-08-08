@@ -1,0 +1,411 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(to top, #00224d 20%, #5d0e41 100%, #ff204e 100%);
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Fondo del scrollbar */
+::-webkit-scrollbar-track {
+  background: #001c41;
+}
+
+/* Thumb del scrollbar */
+::-webkit-scrollbar-thumb {
+  background: #ff204e;
+  border-radius: 10px;
+  border: 2px solid #001c41;
+}
+
+/* Color del scrollbar con hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #a0153e;
+}
+
+/* Para que el scroll se posicione correctamente cuando se le hace click a las anchorTags*/
+section {
+  scroll-margin-top: 5rem;
+}
+
+/* Menu de navegación */
+nav {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: rgba(0, 33, 77, 0.3);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+ul {
+  display: flex;
+  justify-content: center;
+  gap: 7rem;
+  padding: 1rem;
+}
+
+li {
+  list-style: none;
+}
+
+/* Estilos del texto del las anchorTags */
+.anchor-menu {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  font-size: 1.3rem;
+  transition: color 0.3s ease;
+}
+
+/* Hover de las anclas */
+.anchor-menu:hover {
+  color: #ff204e;
+}
+
+/* Contenedor de mi imagen*/
+.img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 35px 0 30px 0;
+  padding-top: 30px;
+}
+
+/* Mi imagen */
+.img-container img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border: 4px solid #5d0e41;
+  box-shadow: 0 4px 12px #ff204e;
+}
+
+/* Mi nombre */
+.my-name {
+  text-align: center;
+  font-size: 2em;
+  margin-top: 1rem;
+  color: white;
+}
+
+/* Mi descripción */
+.my-description {
+  text-align: center;
+  font-size: 1.5em;
+  margin-bottom: 35px;
+  color: white;
+}
+
+/* Contenedor de los titulos */
+.title-container {
+  padding: 16px 16px;
+  text-align: center;
+  margin: 2rem auto;
+  max-width: 800px;
+  border-radius: 12px;
+  color: white;
+}
+
+/* Texto sobre mi */
+#text-about-me {
+  padding: 0 1rem;
+  color: white;
+}
+
+/* Grupo de botones: CV, Github, LinkedIN */
+
+/* Contenedor de los botones */
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+/* Botones */
+.icon-button {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px #ff204e;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Icono svg de los botones */
+.icon-button img {
+  width: 30px;
+  height: 30px;
+}
+
+/* Hover de los botones */
+.icon-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px #ff204e;
+}
+
+/* Habilidades */
+
+.skill-group {
+  margin-bottom: 3rem;
+}
+
+.skill-subtitle {
+  text-align: center;
+  font-size: 1.5rem;
+  color: white;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.skill-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.skill-box {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 10px;
+  width: 90px;
+  height: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.skill-box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.skill-box img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 6px;
+  object-fit: contain;
+}
+
+.skill-box p {
+  font-size: 0.7rem;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+  text-align: center;
+}
+
+/* Subtitulos */
+
+.subtitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+/* Icono de los subtitulos de las secciones */
+.subtitle-icon {
+  width: 30px;
+  height: 30px;
+  vertical-align: middle;
+}
+
+/* Card de proyectos */
+
+/* Contenedor para insertar la card con javascript */
+.card-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 300px));
+  gap: 40px;
+  justify-content: center;
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Contenedor de la card */
+.card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+  background-color: #00224d;
+  box-shadow: 0 6px 6px 0 #ff204e;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover de la card */
+.card-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px #ff204e;
+}
+
+/* Contenedor de la imagen de la card */
+.card-image-container {
+  width: 100%;
+}
+
+/* Imagen de la card */
+.card-image-container img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Contenedor del texto de la card */
+.text-container {
+  padding: 20px;
+  text-align: center;
+}
+
+/* Titulo del proyecto */
+.project-title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: white;
+}
+
+/* Descripción del proyecto */
+.description {
+  font-size: 1rem;
+  color: white;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+/* iconos svg */
+
+.technologies-container {
+  padding: 15px 0;
+  background-color: #0f0f0f;
+  width: 100%;
+}
+
+.technologies-container ul {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.technologies-container li {
+  background-color: white;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 2px 8px 2px #ff204e;
+}
+
+.technologies-container li img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+/* Formulario de contacto*/
+
+form {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #00224d;
+  border-radius: 16px;
+  color: white;
+}
+
+form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+form textarea {
+  resize: vertical;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: none;
+  border-bottom: 1px solid white;
+  outline: none;
+  font-size: 1rem;
+  background-color: #00224d;
+  color: white;
+}
+
+form input:focus,
+form textarea:focus {
+  color: white;
+  background-color: #001c41;
+}
+
+form button {
+  display: block;
+  width: 150px;
+  margin-top: 15px;
+  padding: 0.75rem;
+  background-color: #ff204e;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #a0153e;
+}
+
+footer {
+  background-color: #00224d;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}

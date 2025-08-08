@@ -1,0 +1,47 @@
+[
+  {
+    "imagen": "../img/1180423327.jpg",
+    "titulo": "Proyecto 1",
+    "descripcion": "Descripción",
+    "tecnologias": [
+      "../img/icons/html-5-svgrepo-com.svg",
+      "../img/icons/css-3-svgrepo-com.svg",
+      "../img/icons/javascript-svgrepo-com.svg"
+    ],
+    "enlace": "#"
+  },
+  {
+    "imagen": "../img/1180423327.jpg",
+    "titulo": "Proyecto 2",
+    "descripcion": "Descripción",
+    "tecnologias": [
+      "../img/icons/html-5-svgrepo-com.svg",
+      "../img/icons/css-3-svgrepo-com.svg",
+      "../img/icons/react-svgrepo-com.svg"
+    ],
+    "enlace": "#"
+  },
+  {
+    "imagen": "../img/1180423327.jpg",
+    "titulo": "Proyecto 3",
+    "descripcion": "Descripción",
+    "tecnologias": [
+      "../img/icons/mongo-svgrepo-com.svg",
+      "../img/icons/express-svgrepo-com.svg",
+      "../img/icons/react-svgrepo-com.svg",
+      "../img/icons/nodejs-icon-svgrepo-com.svg"
+    ],
+    "enlace": "#"
+  },
+  {
+    "imagen": "../img/1180423327.jpg",
+    "titulo": "Proyecto 4",
+    "descripcion": "Descripción",
+    "tecnologias": [
+      "../img/icons/html-5-svgrepo-com.svg",
+      "../img/icons/css-3-svgrepo-com.svg",
+      "../img/icons/javascript-svgrepo-com.svg"
+    ],
+    "enlace": "#"
+  }
+]
