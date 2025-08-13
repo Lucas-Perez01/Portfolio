@@ -10,6 +10,9 @@ async function cargarProyectos() {
           <div class="card-image-container">
             <a class="anchor-menu" href="${proyecto.enlace}" target="_blank">
               <img src="${proyecto.imagen}" alt="${proyecto.titulo}" />
+               <div class="image-overlay">
+                  <span>Visitar</span>
+                </div>
             </a>
           </div>
           <div class="text-container">
@@ -26,6 +29,11 @@ async function cargarProyectos() {
                .join("")}
             </ul>
           </div>
+          <a class="anchor-github github-icon" href="${
+            proyecto.repositorio
+          }" target="_blank">
+            <img src="../img/icons/github-svgrepo-com.svg" alt="github" />GitHub
+          </a>
         </div>
       `;
     });
