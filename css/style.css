@@ -4,40 +4,32 @@
   padding: 0;
 }
 
+:root {
+  --primary-color: #171717;
+  --secondary-color: #05122a;
+  --tertiary-color: #0a1837;
+  --hover-color: #22d3eece;
+  --border-color: #22d3ee;
+  --shadow-color: #22d3ee80;
+  --text-color: #d1d5db;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  background: linear-gradient(to top, #00224d 20%, #5d0e41 100%, #ff204e 100%);
+  background: linear-gradient(
+    to top,
+    var(--primary-color) 20%,
+    var(--secondary-color) 100%,
+    var(--tertiary-color) 100%
+  );
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  color: white;
-}
-
-/* Scrollbar */
-
-::-webkit-scrollbar {
-  width: 12px;
-}
-
-/* Fondo del scrollbar */
-::-webkit-scrollbar-track {
-  background: #001c41;
-}
-
-/* Thumb del scrollbar */
-::-webkit-scrollbar-thumb {
-  background: #ff204e;
-  border-radius: 10px;
-  border: 2px solid #001c41;
-}
-
-/* Color del scrollbar con hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #a0153e;
+  color: var(--text-color);
 }
 
 /* Para que el scroll se posicione correctamente cuando se le hace click a las anchorTags*/
@@ -70,15 +62,15 @@ li {
 /* Estilos del texto del las anchorTags */
 .anchor-menu {
   text-decoration: none;
-  color: white;
-  font-weight: 600;
-  font-size: 1.3rem;
+  color: var(--text-color);
+  font-weight: 400;
+  font-size: 1rem;
   transition: color 0.3s ease;
 }
 
 /* Hover de las anclas */
 .anchor-menu:hover {
-  color: #ff204e;
+  color: var(--hover-color);
 }
 
 /* Contenedor de mi imagen*/
@@ -96,14 +88,13 @@ li {
   width: 150px;
   height: 150px;
   object-fit: cover;
-  border: 4px solid #5d0e41;
-  box-shadow: 0 4px 12px #ff204e;
 }
 
 /* Mi nombre */
 .my-name {
   text-align: center;
   font-size: 2em;
+  font-weight: 500;
   margin-top: 1rem;
   color: white;
 }
@@ -111,25 +102,29 @@ li {
 /* Mi descripción */
 .my-description {
   text-align: center;
-  font-size: 1.5em;
+  font-size: 1.3em;
+  font-weight: 400;
   margin-bottom: 35px;
-  color: white;
+  color: var(--border-color);
 }
 
-/* Contenedor de los titulos */
+/* Contenedor de los titulos y texto */
 .title-container {
-  padding: 16px 16px;
-  text-align: center;
-  margin: 2rem auto;
-  max-width: 800px;
-  border-radius: 12px;
-  color: white;
+  padding: 20px 20px;
+  margin: 1.2rem auto;
+  margin-top: 100px;
+  max-width: 650px;
 }
 
 /* Texto sobre mi */
-#text-about-me {
-  padding: 0 1rem;
+.text-about-me {
+  text-align: justify;
+  word-spacing: -1.7px;
+  line-height: 1.5;
+  padding: 0 50px;
+  margin: 0 0 40px 0;
   color: white;
+  font-size: 17px;
 }
 
 /* Grupo de botones: CV, Github, LinkedIN */
@@ -144,16 +139,18 @@ li {
 
 /* Botones */
 .icon-button {
-  width: 48px;
-  height: 48px;
+  width: 180px;
+  height: 50px;
+  gap: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: white;
+  background-color: transparent;
+  border: 2px solid white;
   border-radius: 12px;
-  box-shadow: 0 4px 8px #ff204e;
   text-decoration: none;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+  color: white;
 }
 
 /* Icono svg de los botones */
@@ -162,10 +159,18 @@ li {
   height: 30px;
 }
 
+/* Icono de Github */
+.github-icon {
+  filter: brightness(0) invert(1);
+}
+
 /* Hover de los botones */
 .icon-button:hover {
   transform: translateY(-3px);
-  box-shadow: 0 6px 12px #ff204e;
+  box-shadow: 0 6px 12px var(--color-terciario);
+  background-color: white;
+  color: black;
+  filter: none;
 }
 
 /* Habilidades */
@@ -178,7 +183,7 @@ li {
   text-align: center;
   font-size: 1.5rem;
   color: white;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -232,9 +237,10 @@ li {
   align-items: center;
   justify-content: center;
   gap: 8px;
-  font-size: 1.75rem;
-  margin-bottom: 1rem;
-  color: white;
+  font-size: 1.5em;
+  font-weight: 500;
+  margin: 50px;
+  color: var(--border-color);
 }
 
 /* Icono de los subtitulos de las secciones */
@@ -253,7 +259,6 @@ li {
   gap: 40px;
   justify-content: center;
   padding: 40px 20px;
-  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -262,18 +267,18 @@ li {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
   margin: 0;
+  border: 1px solid var(--text-color);
   overflow: hidden;
-  background-color: #00224d;
-  box-shadow: 0 6px 6px 0 #ff204e;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: var(--color-primario);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.5s ease;
 }
 
 /* Hover de la card */
 .card-container:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 16px #ff204e;
+  border-color: var(--border-color);
+  box-shadow: 1px 1px 30px var(--border-color);
 }
 
 /* Contenedor de la imagen de la card */
@@ -297,49 +302,55 @@ li {
 /* Titulo del proyecto */
 .project-title {
   font-size: 1.5rem;
+  padding: 10px;
   margin-bottom: 10px;
   color: white;
 }
 
 /* Descripción del proyecto */
 .description {
+  text-align: left;
+  text-wrap: balance;
   font-size: 1rem;
-  color: white;
-  margin-bottom: 10px;
+  padding: 10px;
+  color: var(--text-color);
+  margin: 0 15px;
   line-height: 1.5;
 }
 
 /* iconos svg */
 
 .technologies-container {
-  padding: 15px 0;
-  background-color: #0f0f0f;
+  padding: 0 0 15px 0;
+  background-color: var(--primary-color);
   width: 100%;
 }
 
 .technologies-container ul {
   display: flex;
   justify-content: center;
-  gap: 15px;
-  padding: 0;
+  gap: 20px;
+  padding: 4px 8px;
   margin: 0;
   list-style: none;
+  flex-wrap: wrap;
 }
 
 .technologies-container li {
-  background-color: white;
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
+  background-color: transparent;
+  color: var(--hover-color);
+  padding: 5px 10px;
+  font-size: 10px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  box-shadow: 0px 2px 8px 2px #ff204e;
+  gap: 8px;
+  border: 1px solid var(--hover-color);
+  border-radius: 20px;
 }
 
 .technologies-container li img {
-  width: 24px;
-  height: 24px;
+  width: 14px;
+  height: 14px;
   object-fit: contain;
 }
 
@@ -349,7 +360,7 @@ form {
   max-width: 600px;
   margin: 2rem auto;
   padding: 2rem;
-  background-color: #00224d;
+  background-color: var(--color-primario);
   border-radius: 16px;
   color: white;
 }
@@ -373,14 +384,14 @@ form textarea {
   border-bottom: 1px solid white;
   outline: none;
   font-size: 1rem;
-  background-color: #00224d;
+  background-color: var(--color-primario);
   color: white;
 }
 
 form input:focus,
 form textarea:focus {
   color: white;
-  background-color: #001c41;
+  background-color: var(--color-cuaternario);
 }
 
 form button {
@@ -388,7 +399,7 @@ form button {
   width: 150px;
   margin-top: 15px;
   padding: 0.75rem;
-  background-color: #ff204e;
+  background-color: var(--color-terciario);
   color: white;
   border: none;
   border-radius: 8px;
@@ -398,11 +409,11 @@ form button {
 }
 
 form button:hover {
-  background-color: #a0153e;
+  background-color: var(--color-quinario);
 }
 
 footer {
-  background-color: #00224d;
+  background-color: var(--color-primario);
   color: white;
   text-align: center;
   padding: 1rem;

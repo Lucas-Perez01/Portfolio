@@ -1,12 +1,15 @@
 [
   {
     "imagen": "../img/1180423327.jpg",
-    "titulo": "Proyecto 1",
-    "descripcion": "Descripción",
+    "titulo": "Portfolio personal",
+    "descripcion": "Sitio web personal desarrollado con HTML5, CSS3 y JavaScript, con información sobre mi, proyectos, habilidades y formulario de contacto.",
     "tecnologias": [
-      "../img/icons/html-5-svgrepo-com.svg",
-      "../img/icons/css-3-svgrepo-com.svg",
-      "../img/icons/javascript-svgrepo-com.svg"
+      { "icon": "../img/icons/html-5-svgrepo-com.svg", "nombre": "HTML5" },
+      { "icon": "../img/icons/css-3-svgrepo-com.svg", "nombre": "CSS3" },
+      {
+        "icon": "../img/icons/javascript-svgrepo-com.svg",
+        "nombre": "JavaScript"
+      }
     ],
     "enlace": "#"
   },

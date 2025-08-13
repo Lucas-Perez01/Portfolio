@@ -19,7 +19,10 @@ async function cargarProyectos() {
           <div class="technologies-container">
             <ul>
              ${proyecto.tecnologias
-               .map((tech) => `<li><img src="${tech}" alt="Icono" /></li>`)
+               .map(
+                 (tech) =>
+                   `<li><img src="${tech.icon}" alt="" />${tech.nombre}</li>`
+               )
                .join("")}
             </ul>
           </div>
