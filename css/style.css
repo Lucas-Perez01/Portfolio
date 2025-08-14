@@ -112,7 +112,8 @@ li {
 .title-container {
   padding: 20px 20px;
   margin: 1.2rem auto;
-  margin-top: 100px;
+  text-align: center;
+  margin-top: 50px;
   max-width: 650px;
 }
 
@@ -122,7 +123,7 @@ li {
   word-spacing: -1.7px;
   line-height: 1.5;
   padding: 0 50px;
-  margin: 0 0 40px 0;
+  margin: 50px 0 40px 0;
   color: white;
   font-size: 17px;
 }
@@ -167,7 +168,6 @@ li {
 /* Hover de los botones */
 .icon-button:hover {
   transform: translateY(-3px);
-  box-shadow: 0 6px 12px var(--color-terciario);
   background-color: white;
   color: black;
   filter: none;
@@ -175,59 +175,96 @@ li {
 
 /* Habilidades */
 
-.skill-group {
-  margin-bottom: 3rem;
-}
-
-.skill-subtitle {
-  text-align: center;
-  font-size: 1.5rem;
-  color: white;
-  margin-bottom: 2rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.skill-container {
+.logos-wrapper {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
-  padding: 0 20px;
+  margin: 50px 0px;
 }
 
-.skill-box {
-  background-color: #ffffff;
-  border-radius: 10px;
-  padding: 10px;
-  width: 90px;
-  height: 90px;
+.logos {
+  width: 70%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  overflow: hidden;
+  /* background-color: transparent; */
+  white-space: nowrap;
+  position: relative;
 }
 
-.skill-box:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+.logos-slide {
+  animation: 10s slide infinite linear;
 }
 
-.skill-box img {
-  width: 40px;
-  height: 40px;
-  margin-bottom: 6px;
-  object-fit: contain;
+.logos-slide img {
+  height: 50px;
+  margin: 0 70px;
 }
 
-.skill-box p {
-  font-size: 0.7rem;
+.logos::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    var(--primary-color) 0%,
+    rgba(23, 23, 23, 0) 100%
+  );
+  content: "";
+  z-index: 1;
+}
+
+.logos::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 200px;
+  height: 100%;
+  background: linear-gradient(
+    to left,
+    var(--primary-color) 0%,
+    rgba(23, 23, 23, 0) 100%
+  );
+  content: "";
+  z-index: 1;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+/* Formación académica */
+
+#formacion {
+  padding: 50px 0;
+  color: var(--text-color);
+}
+
+.timeline {
+  width: 80%;
+  margin: auto;
+  border-left: 2px solid var(--border-color);
+  padding-left: 20px;
+}
+
+.timeline-item {
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.timeline-item .year {
   font-weight: bold;
-  color: #333;
-  margin: 0;
-  text-align: center;
+  color: var(--hover-color);
+}
+
+.timeline-item .details h3 {
+  margin: 5px 0;
+  font-size: 1.2rem;
 }
 
 /* Subtitulos */
@@ -237,13 +274,17 @@ li {
   align-items: center;
   justify-content: center;
   gap: 8px;
-  font-size: 1.5em;
+  font-size: 2em;
   font-weight: 500;
-  margin: 50px;
+  margin: 50px 50px 10px 50px;
   color: var(--border-color);
 }
 
-/* Icono de los subtitulos de las secciones */
+.title-container p {
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
 .subtitle-icon {
   width: 30px;
   height: 30px;
@@ -270,7 +311,7 @@ li {
   margin: 0;
   border: 1px solid var(--text-color);
   overflow: hidden;
-  background-color: var(--color-primario);
+  background-color: var(--primary-color);
   transition: box-shadow 0.3s ease, border-color 0.5s ease;
 }
 
@@ -335,6 +376,7 @@ li {
 /* Titulo del proyecto */
 .project-title {
   font-size: 1.5rem;
+  font-weight: 400;
   padding: 10px;
   margin-bottom: 10px;
   color: white;
@@ -347,7 +389,7 @@ li {
   font-size: 1rem;
   padding: 10px;
   color: var(--text-color);
-  margin: 0 15px;
+  margin: 0 20px;
   line-height: 1.5;
 }
 
@@ -362,7 +404,7 @@ li {
 .technologies-container ul {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 10px;
   padding: 4px 8px;
   margin: 0;
   list-style: none;
@@ -377,7 +419,7 @@ li {
   display: flex;
   align-items: center;
   gap: 8px;
-  border: 1px solid var(--hover-color);
+  border: 2px solid var(--hover-color);
   border-radius: 20px;
 }
 
@@ -443,14 +485,14 @@ form textarea {
   border-bottom: 1px solid white;
   outline: none;
   font-size: 1rem;
-  background-color: var(--color-primario);
+  background-color: var(--primary-color);
   color: white;
 }
 
 form input:focus,
 form textarea:focus {
   color: white;
-  background-color: var(--color-cuaternario);
+  background-color: var(--primary-color);
 }
 
 form button {
@@ -458,7 +500,7 @@ form button {
   width: 150px;
   margin-top: 15px;
   padding: 0.75rem;
-  background-color: var(--color-terciario);
+  background-color: var(--hover-color);
   color: white;
   border: none;
   border-radius: 8px;
@@ -468,11 +510,11 @@ form button {
 }
 
 form button:hover {
-  background-color: var(--color-quinario);
+  background-color: var(--shadow-color);
 }
 
 footer {
-  background-color: var(--color-primario);
+  background-color: var(--primary-color);
   color: white;
   text-align: center;
   padding: 1rem;

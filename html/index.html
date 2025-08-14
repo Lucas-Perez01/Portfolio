@@ -22,6 +22,7 @@
       <ul>
         <li><a class="anchor-menu" href="#sobre-mi">Sobre mi</a></li>
         <li><a class="anchor-menu" href="#habilidades">Habilidades</a></li>
+        <li><a class="anchor-menu" href="#formacion">Formacion</a></li>
         <li><a class="anchor-menu" href="#proyectos">Proyectos</a></li>
         <li><a class="anchor-menu" href="#contacto">Contacto</a></li>
       </ul>
@@ -82,68 +83,71 @@
 
       <section id="habilidades">
         <div class="title-container">
-          <h2 class="subtitle">Habilidades Técnicas</h2>
+          <h2 class="subtitle">Habilidades técnicas</h2>
+          <p>Algunas de mis habilidades</p>
         </div>
-
-        <div class="skill-group">
-          <h3 class="skill-subtitle">Frontend</h3>
-          <div class="skill-container">
-            <div class="skill-box">
+        <div class="logos-wrapper">
+          <div class="logos" id="logos">
+            <div class="logos-slide" id="slider">
               <img src="../img/icons/html-5-svgrepo-com.svg" alt="HTML5" />
-              <p>HTML5</p>
-            </div>
-            <div class="skill-box">
               <img src="../img/icons/css-3-svgrepo-com.svg" alt="CSS3" />
-              <p>CSS3</p>
-            </div>
-            <div class="skill-box">
-              <img src="../img/icons/javascript-svgrepo-com.svg" alt="HTML5" />
-              <p>JavaScript</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="skill-group">
-          <h3 class="skill-subtitle">Backend</h3>
-          <div class="skill-container">
-            <div class="skill-box">
+              <img
+                src="../img/icons/javascript-svgrepo-com.svg"
+                alt="JavaScript"
+              />
               <img
                 src="../img/icons/nodejs-icon-svgrepo-com.svg"
                 alt="Node.js"
               />
-              <p>Node.js</p>
-            </div>
-            <div class="skill-box">
-              <img src="../img/icons/express-svgrepo-com.svg" alt="HTML5" />
-              <p>Express.js</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="skill-group">
-          <h3 class="skill-subtitle">Bases de datos</h3>
-          <div class="skill-container">
-            <div class="skill-box">
-              <img src="../img/icons/mysql-svgrepo-com.svg" alt="Git" />
-              <p>MySQL</p>
-            </div>
-            <div class="skill-box">
-              <img src="../img/icons/mongo-svgrepo-com.svg" alt="Git" />
-              <p>MongoDB</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="skill-group">
-          <h3 class="skill-subtitle">Herramientas</h3>
-          <div class="skill-container">
-            <div class="skill-box">
-              <img src="../img/icons/github-svgrepo-com.svg" alt="Git" />
-              <p>Github</p>
-            </div>
-            <div class="skill-box">
+              <img
+                src="../img/icons/express-svgrepo-com.svg"
+                alt="Express.js"
+              />
+              <img src="../img/icons/mysql-svgrepo-com.svg" alt="MySQL" />
+              <img src="../img/icons/mongo-svgrepo-com.svg" alt="MongoDB" />
+              <img src="../img/icons/github-svgrepo-com.svg" alt="GitHub" />
               <img src="../img/icons/git-svgrepo-com.svg" alt="Git" />
-              <p>Git</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="formacion">
+        <div class="title-container">
+          <h2 class="subtitle">Formación</h2>
+          <p>Mi formación académica</p>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <span class="year">2022 - 2024</span>
+            <div class="details">
+              <h3>Técnico universitario en programación</h3>
+              <p>Universidad Tecnológica Nacional</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <span class="year">2025 - En Curso</span>
+            <div class="details">
+              <h3>Diplomatura en programación Backend</h3>
+              <p>Universidad Nacional de Tres de Febrero</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <span class="year">2025 - En Curso</span>
+            <div class="details">
+              <h3>Especialización en programación Backend</h3>
+              <p>Alura Latam Oracle Next Education</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <span class="year">2025 - En Curso</span>
+            <div class="details">
+              <h3>Diseño y programación de Videojuegos con Unity</h3>
+              <p>Universidad Nacional de Córdoba</p>
             </div>
           </div>
         </div>
@@ -151,14 +155,8 @@
 
       <section id="proyectos">
         <div class="title-container">
-          <h2 class="subtitle">
-            <img
-              class="subtitle-icon"
-              src="../img/icons/rocket-svgrepo-com.svg"
-              alt="Ícono contacto"
-            />
-            Proyectos
-          </h2>
+          <h2 class="subtitle">Proyectos</h2>
+          <p>Algunos de mis proyectos destacados</p>
         </div>
         <div class="card-wrapper"></div>
       </section>
@@ -196,5 +194,6 @@
     </footer>
 
     <script type="module" src="../scripts/insertCard.js"></script>
+    <script src="../scripts/skillsLoop.js"></script>
   </body>
 </html>
