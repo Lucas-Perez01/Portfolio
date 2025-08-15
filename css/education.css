@@ -1,0 +1,27 @@
+#formacion {
+  padding: 50px 0;
+  color: var(--text-color);
+}
+
+.timeline {
+  width: 80%;
+  margin: auto;
+  padding-left: 20px;
+}
+
+.timeline-item {
+  margin-bottom: 30px;
+  position: relative;
+  padding-left: 20px;
+  border-left: 2px solid var(--border-color);
+}
+
+.timeline-item .year {
+  font-weight: bold;
+  color: var(--hover-color);
+}
+
+.timeline-item .details h3 {
+  margin: 5px 0;
+  font-size: 1.2rem;
+}

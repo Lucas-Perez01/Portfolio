@@ -1,13 +1,13 @@
 [
   {
-    "imagen": "../img/1180423327.jpg",
+    "imagen": "../assets/1180423327.jpg",
     "titulo": "Portfolio personal",
     "descripcion": "Sitio web personal desarrollado con HTML5, CSS3 y JavaScript, con información sobre mi, proyectos, habilidades y formulario de contacto.",
     "tecnologias": [
-      { "icon": "../img/icons/html-5-svgrepo-com.svg", "nombre": "HTML5" },
-      { "icon": "../img/icons/css-3-svgrepo-com.svg", "nombre": "CSS3" },
+      { "icon": "../assets/icons/html-5-svgrepo-com.svg", "nombre": "HTML5" },
+      { "icon": "../assets/icons/css-3-svgrepo-com.svg", "nombre": "CSS3" },
       {
-        "icon": "../img/icons/javascript-svgrepo-com.svg",
+        "icon": "../assets/icons/javascript-svgrepo-com.svg",
         "nombre": "JavaScript"
       }
     ],
@@ -15,36 +15,36 @@
     "repositorio": "https://github.com/Lucas-Perez01/Portfolio"
   },
   {
-    "imagen": "../img/1180423327.jpg",
+    "imagen": "../assets/1180423327.jpg",
     "titulo": "Proyecto 2",
     "descripcion": "Descripción",
     "tecnologias": [
-      "../img/icons/html-5-svgrepo-com.svg",
-      "../img/icons/css-3-svgrepo-com.svg",
-      "../img/icons/react-svgrepo-com.svg"
+      "../assets/icons/html-5-svgrepo-com.svg",
+      "../assets/icons/css-3-svgrepo-com.svg",
+      "../assets/icons/react-svgrepo-com.svg"
     ],
     "enlace": "#"
   },
   {
-    "imagen": "../img/1180423327.jpg",
+    "imagen": "../assets/1180423327.jpg",
     "titulo": "Proyecto 3",
     "descripcion": "Descripción",
     "tecnologias": [
-      "../img/icons/mongo-svgrepo-com.svg",
-      "../img/icons/express-svgrepo-com.svg",
-      "../img/icons/react-svgrepo-com.svg",
-      "../img/icons/nodejs-icon-svgrepo-com.svg"
+      "../assets/icons/mongo-svgrepo-com.svg",
+      "../assets/icons/express-svgrepo-com.svg",
+      "../assets/icons/react-svgrepo-com.svg",
+      "../assets/icons/nodejs-icon-svgrepo-com.svg"
     ],
     "enlace": "#"
   },
   {
-    "imagen": "../img/1180423327.jpg",
+    "imagen": "../assets/1180423327.jpg",
     "titulo": "Proyecto 4",
     "descripcion": "Descripción",
     "tecnologias": [
-      "../img/icons/html-5-svgrepo-com.svg",
-      "../img/icons/css-3-svgrepo-com.svg",
-      "../img/icons/javascript-svgrepo-com.svg"
+      "../assets/icons/html-5-svgrepo-com.svg",
+      "../assets/icons/css-3-svgrepo-com.svg",
+      "../assets/icons/javascript-svgrepo-com.svg"
     ],
     "enlace": "#"
   }

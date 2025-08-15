@@ -5,9 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lucas Perez | Portfolio</title>
     <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/skills.css" />
+    <link rel="stylesheet" href="../css/education.css" />
+    <link rel="stylesheet" href="../css/card.css" />
+    <link rel="stylesheet" href="../css/navbar.css" />
+    <link rel="stylesheet" href="../css/responsive-design.css" />
     <link
       rel="shortcut icon"
-      href="../img/icons/happy.png"
+      href="../assets/icons/happy.png"
       type="image/x-icon"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -18,8 +23,13 @@
     />
   </head>
   <body>
-    <nav>
-      <ul>
+    <nav class="navbar">
+      <img
+        id="hamburger"
+        src="hamburger-list-menu-svgrepo-com.svg"
+        alt="Menú"
+      />
+      <ul id="nav-links">
         <li><a class="anchor-menu" href="#sobre-mi">Sobre mi</a></li>
         <li><a class="anchor-menu" href="#habilidades">Habilidades</a></li>
         <li><a class="anchor-menu" href="#formacion">Formacion</a></li>
@@ -30,7 +40,7 @@
 
     <main>
       <div class="img-container">
-        <img src="../img/1180423327.jpg" alt="" />
+        <img src="../assets/1180423327.jpg" alt="" />
       </div>
       <h1 class="my-name">Lucas Perez</h1>
       <h2 class="my-description">Desarrollador frontend</h2>
@@ -41,27 +51,29 @@
           href="../pdf/Lucas Perez - CV Curriculum Vitae.pdf"
           download
           title="Descargar CV"
-          ><img src="../img/icons/download-svgrepo-com.svg" alt="" />Descargar
-          CV
+          ><img
+            src="../assets/icons/download-svgrepo-com.svg"
+            alt=""
+          />Descargar CV
         </a>
         <a
           class="icon-button github-icon"
           href="https://github.com/Lucas-Perez01"
           target="_blank"
           title="GitHub"
-          ><img src="../img/icons/github-svgrepo-com.svg" alt="" />GitHub
+          ><img src="../assets/icons/github-svgrepo-com.svg" alt="" />GitHub
         </a>
         <a
           class="icon-button"
           href="https://www.linkedin.com/in/lucas-elias-perez/"
           target="_blank"
           title="LinkedIn"
-          ><img src="../img/icons/linkedin-svgrepo-com.svg" alt="" />LinkedIn
+          ><img src="../assets/icons/linkedin-svgrepo-com.svg" alt="" />LinkedIn
         </a>
       </div>
 
       <section id="sobre-mi">
-        <div class="title-container">
+        <div class="title-container reveal">
           <h2 class="subtitle">Sobre mí</h2>
           <p class="text-about-me">
             Soy un desarrollador web Frontend con experiencia en la creación de
@@ -82,68 +94,65 @@
       </section>
 
       <section id="habilidades">
-        <div class="title-container">
+        <div class="title-container reveal">
           <h2 class="subtitle">Habilidades técnicas</h2>
-          <p>Algunas de mis habilidades</p>
+          <p class="reveal">Algunas de mis habilidades</p>
         </div>
-        <div class="logos-wrapper">
+        <div class="logos-wrapper reveal">
           <div class="logos" id="logos">
             <div class="logos-slide" id="slider">
-              <img src="../img/icons/html-5-svgrepo-com.svg" alt="HTML5" />
-              <img src="../img/icons/css-3-svgrepo-com.svg" alt="CSS3" />
+              <img src="../assets/icons/html-5-svgrepo-com.svg" alt="HTML5" />
+              <img src="../assets/icons/css-3-svgrepo-com.svg" alt="CSS3" />
               <img
-                src="../img/icons/javascript-svgrepo-com.svg"
+                src="../assets/icons/javascript-svgrepo-com.svg"
                 alt="JavaScript"
               />
               <img
-                src="../img/icons/nodejs-icon-svgrepo-com.svg"
+                src="../assets/icons/nodejs-icon-svgrepo-com.svg"
                 alt="Node.js"
               />
               <img
-                src="../img/icons/express-svgrepo-com.svg"
+                src="../assets/icons/express-svgrepo-com.svg"
                 alt="Express.js"
               />
-              <img src="../img/icons/mysql-svgrepo-com.svg" alt="MySQL" />
-              <img src="../img/icons/mongo-svgrepo-com.svg" alt="MongoDB" />
-              <img src="../img/icons/github-svgrepo-com.svg" alt="GitHub" />
-              <img src="../img/icons/git-svgrepo-com.svg" alt="Git" />
+              <img src="../assets/icons/mysql-svgrepo-com.svg" alt="MySQL" />
+              <img src="../assets/icons/mongo-svgrepo-com.svg" alt="MongoDB" />
+              <img src="../assets/icons/github-svgrepo-com.svg" alt="GitHub" />
+              <img src="../assets/icons/git-svgrepo-com.svg" alt="Git" />
             </div>
           </div>
         </div>
       </section>
 
       <section id="formacion">
-        <div class="title-container">
+        <div class="title-container reveal">
           <h2 class="subtitle">Formación</h2>
-          <p>Mi formación académica</p>
+          <p class="reveal">Mi formación académica</p>
         </div>
 
         <div class="timeline">
-          <div class="timeline-item">
+          <div class="timeline-item reveal">
             <span class="year">2022 - 2024</span>
             <div class="details">
               <h3>Técnico universitario en programación</h3>
               <p>Universidad Tecnológica Nacional</p>
             </div>
           </div>
-
-          <div class="timeline-item">
+          <div class="timeline-item reveal">
             <span class="year">2025 - En Curso</span>
             <div class="details">
               <h3>Diplomatura en programación Backend</h3>
               <p>Universidad Nacional de Tres de Febrero</p>
             </div>
           </div>
-
-          <div class="timeline-item">
+          <div class="timeline-item reveal">
             <span class="year">2025 - En Curso</span>
             <div class="details">
               <h3>Especialización en programación Backend</h3>
               <p>Alura Latam Oracle Next Education</p>
             </div>
           </div>
-
-          <div class="timeline-item">
+          <div class="timeline-item reveal">
             <span class="year">2025 - En Curso</span>
             <div class="details">
               <h3>Diseño y programación de Videojuegos con Unity</h3>
@@ -154,25 +163,25 @@
       </section>
 
       <section id="proyectos">
-        <div class="title-container">
+        <div class="title-container reveal">
           <h2 class="subtitle">Proyectos</h2>
-          <p>Algunos de mis proyectos destacados</p>
+          <p class="reveal">Algunos de mis proyectos destacados</p>
         </div>
-        <div class="card-wrapper"></div>
+        <div class="card-wrapper reveal"></div>
       </section>
 
       <section id="contacto">
-        <div class="title-container">
+        <div class="title-container reveal">
           <h2 class="subtitle">
             <img
               class="subtitle-icon"
-              src="../img/icons/gmail-svgrepo-com.svg"
+              src="../assets/icons/gmail-svgrepo-com.svg"
               alt="Ícono contacto"
             />
             Contacto
           </h2>
         </div>
-        <form action="">
+        <form action="" class="reveal">
           <label for="email">Correo electrónico</label>
           <input type="email" id="email" name="email" required />
 
@@ -195,5 +204,7 @@
 
     <script type="module" src="../scripts/insertCard.js"></script>
     <script src="../scripts/skillsLoop.js"></script>
+    <script src="../scripts/hamburgerMenu.js"></script>
+    <script src="../scripts/animation.js"></script>
   </body>
 </html>

@@ -1,0 +1,83 @@
+/* Navbar general */
+nav.navbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: rgba(0, 33, 77, 0.3);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Lista de enlaces */
+#nav-links {
+  display: flex;
+  justify-content: center;
+  gap: 7rem;
+  padding: 1rem;
+  list-style: none;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+  overflow: hidden;
+  max-height: 1000px; /* Valor grande para que se vea completo inicialmente */
+  opacity: 1;
+}
+
+/* Enlaces individuales */
+#nav-links li {
+  margin: 0;
+}
+
+.anchor-menu {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 400;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.anchor-menu:hover {
+  color: var(--hover-color);
+}
+
+/* Icono de hamburguesa */
+#hamburger {
+  display: none;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  z-index: 1100; /* Para que esté por encima del menú */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  #nav-links {
+    flex-direction: column;
+    gap: 0;
+    background-color: rgba(0, 33, 77, 0.9);
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    text-align: center;
+    padding: 0;
+    max-height: 0;
+    opacity: 0;
+  }
+
+  #nav-links.active {
+    max-height: 500px; /* Ajustable según número de enlaces */
+    opacity: 1;
+  }
+
+  #nav-links li {
+    margin: 0.5rem 0;
+  }
+
+  #hamburger {
+    display: block;
+  }
+}

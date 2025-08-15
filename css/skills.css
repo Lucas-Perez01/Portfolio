@@ -1,20 +1,25 @@
-.logos {
-  width: 80%;
+.logos-wrapper {
   display: flex;
-  margin: auto;
+  justify-content: center;
+  margin: 50px 0px;
+}
+
+.logos {
+  width: 70%;
+  display: flex;
   overflow: hidden;
-  background-color: white;
+  /* background-color: transparent; */
   white-space: nowrap;
   position: relative;
-  margin-top: calc(50vh - 50px);
 }
 
 .logos-slide {
   animation: 10s slide infinite linear;
-  img {
-    height: 50px;
-    margin: 0px 70px;
-  }
+}
+
+.logos-slide img {
+  height: 50px;
+  margin: 0 70px;
 }
 
 .logos::before {
@@ -24,9 +29,9 @@
   width: 200px;
   height: 100%;
   background: linear-gradient(
-    to left,
-    rgba(255, 255, 255, 0),
-    rgba(255, 255, 255)
+    to right,
+    var(--primary-color) 0%,
+    rgba(23, 23, 23, 0) 100%
   );
   content: "";
   z-index: 1;
@@ -40,8 +45,8 @@
   height: 100%;
   background: linear-gradient(
     to left,
-    rgba(255, 255, 255, 0),
-    rgba(255, 255, 255)
+    var(--primary-color) 0%,
+    rgba(23, 23, 23, 0) 100%
   );
   content: "";
   z-index: 1;

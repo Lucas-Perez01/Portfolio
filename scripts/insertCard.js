@@ -32,7 +32,7 @@ async function cargarProyectos() {
           <a class="anchor-github github-icon" href="${
             proyecto.repositorio
           }" target="_blank">
-            <img src="../img/icons/github-svgrepo-com.svg" alt="github" />GitHub
+            <img src="../assets/icons/github-svgrepo-com.svg" alt="github" />GitHub
           </a>
         </div>
       `;

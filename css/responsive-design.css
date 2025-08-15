@@ -1,0 +1,625 @@
+/* Responsive para pantallas ≤ 480px */
+@media (max-width: 480px) {
+  /* Navegación */
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 8px;
+  }
+
+  nav ul li a.anchor-menu {
+    font-size: 0.85rem;
+    padding: 5px 6px;
+  }
+
+  /* Imagen principal */
+  .img-container img {
+    width: 100px;
+    height: 100px;
+    margin: 8px 0;
+  }
+
+  /* Nombre y descripción */
+  .my-name {
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 8px 0;
+  }
+
+  .my-description {
+    font-size: 0.9rem;
+    text-align: center;
+    margin: 8px 10px 10px 10px;
+  }
+
+  /* Botones */
+  .button-group {
+    display: flex;
+    flex-direction: column !important;
+    gap: 20px !important;
+    width: 100%;
+    align-items: center;
+  }
+
+  .icon-button,
+  .anchor-github {
+    width: 140px;
+    height: 35px;
+    font-size: 0.85rem;
+  }
+
+  .icon-button img,
+  .anchor-github img {
+    width: 18px;
+    height: 18px;
+  }
+
+  /* Logos / Skills */
+  .logos-wrapper {
+    margin: 20px 0;
+  }
+
+  .logos {
+    width: 95%;
+  }
+
+  .logos-slide img {
+    height: 30px;
+    margin: 0 20px;
+  }
+
+  /* Timeline / Educación */
+  .timeline {
+    width: 100%;
+    padding-left: 5px;
+  }
+
+  .timeline-item .details h3 {
+    font-size: 0.95rem;
+  }
+
+  /* Cards */
+  .card-wrapper {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .project-title {
+    font-size: 1.2rem;
+  }
+
+  .description {
+    font-size: 0.9rem;
+    margin: 0 8px;
+  }
+
+  /* Formulario */
+  form {
+    padding: 0 10px;
+    margin: 15px auto;
+  }
+
+  form input,
+  form textarea {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+  }
+
+  form button {
+    width: 130px;
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  /* Footer */
+  footer {
+    font-size: 0.8rem;
+    padding: 10px;
+  }
+
+  /* Subtítulos y títulos */
+  .subtitle {
+    font-size: 1.3rem;
+    margin: 25px 10px 12px 10px;
+    gap: 5px;
+  }
+
+  .title-container {
+    padding: 10px;
+    max-width: 100%;
+    margin: 25px auto;
+  }
+
+  .text-about-me {
+    padding: 0 15px;
+    font-size: 0.9rem;
+    margin: 20px 0 15px 0;
+  }
+
+  .title-container p {
+    font-size: 0.95rem;
+  }
+
+  /* Iconos de tecnologías dentro de cards */
+  .technologies-container li {
+    font-size: 8px;
+    padding: 3px 6px;
+  }
+
+  .technologies-container li img {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+/* Responsive para pantallas ≤ 600px */
+@media (max-width: 600px) {
+  /* Navegación */
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  nav ul li a.anchor-menu {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+  /* Imagen principal */
+  .img-container {
+    margin: 20px 0;
+    padding-top: 10px;
+  }
+
+  .img-container img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+  }
+
+  /* Nombre y descripción */
+  .my-name {
+    font-size: 1.8rem;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .my-description {
+    font-size: 1rem;
+    text-align: center;
+    margin: 5px 10px 20px 10px;
+  }
+
+  /* Botones */
+  .button-group {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .icon-button,
+  .anchor-github {
+    width: 160px;
+    height: 45px;
+    font-size: 0.9rem;
+  }
+
+  .icon-button img,
+  .anchor-github img {
+    width: 25px;
+    height: 25px;
+  }
+
+  /* Logos / Skills */
+  .logos-wrapper {
+    margin: 30px 0;
+  }
+
+  .logos {
+    width: 90%;
+  }
+
+  .logos-slide img {
+    height: 35px;
+    margin: 0 30px;
+  }
+
+  /* Timeline / Educación */
+  .timeline {
+    width: 95%;
+    padding-left: 10px;
+  }
+
+  .timeline-item .details h3 {
+    font-size: 1rem;
+  }
+
+  /* Cards */
+  .card-wrapper {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .description {
+    font-size: 0.9rem;
+    margin: 0 10px;
+  }
+
+  .project-title {
+    font-size: 1.3rem;
+  }
+
+  /* Formulario */
+  form {
+    padding: 0 10px;
+    margin: 20px auto;
+  }
+
+  form input,
+  form textarea {
+    font-size: 0.9rem;
+    padding: 0.6rem;
+  }
+
+  form button {
+    width: 140px;
+    padding: 0.6rem;
+    font-size: 0.9rem;
+  }
+
+  /* Footer */
+  footer {
+    font-size: 0.8rem;
+    padding: 10px;
+  }
+
+  /* Subtítulos y títulos */
+  .subtitle {
+    font-size: 1.5rem;
+    margin: 30px 10px 10px 10px;
+    gap: 5px;
+  }
+
+  .title-container {
+    padding: 10px 10px;
+    max-width: 95%;
+    margin: 30px auto;
+  }
+
+  .text-about-me {
+    padding: 0 20px;
+    font-size: 0.9rem;
+    margin: 30px 0 20px 0;
+  }
+
+  .title-container p {
+    font-size: 1rem;
+  }
+
+  /* Iconos de tecnologías dentro de cards */
+  .technologies-container li {
+    font-size: 9px;
+    padding: 4px 8px;
+  }
+
+  .technologies-container li img {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+/* Responsive para pantallas ≤ 768px */
+@media (max-width: 768px) {
+  /* Navegación */
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  nav ul li a.anchor-menu {
+    font-size: 0.95rem;
+    padding: 6px 8px;
+  }
+
+  /* Imagen principal */
+  .img-container img {
+    width: 120px;
+    height: 120px;
+    margin: 10px 0;
+  }
+
+  /* Nombre y descripción */
+  .my-name {
+    font-size: 1.8rem;
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  .my-description {
+    font-size: 1rem;
+    text-align: center;
+    margin: 10px 15px 15px 15px;
+  }
+
+  /* Botones */
+  .button-group {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    align-items: center;
+  }
+
+  .icon-button,
+  .anchor-github {
+    width: 150px;
+    height: 40px;
+    font-size: 0.95rem;
+  }
+
+  .icon-button img,
+  .anchor-github img {
+    width: 20px;
+    height: 20px;
+  }
+
+  /* Logos / Skills */
+  .logos-wrapper {
+    margin: 30px 0;
+  }
+
+  .logos {
+    width: 90%;
+  }
+
+  .logos-slide img {
+    height: 35px;
+    margin: 0 30px;
+  }
+
+  /* Timeline / Educación */
+  .timeline {
+    width: 95%;
+    padding-left: 10px;
+  }
+
+  .timeline-item .details h3 {
+    font-size: 1rem;
+  }
+
+  /* Cards */
+  .card-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .project-title {
+    font-size: 1.3rem;
+  }
+
+  .description {
+    font-size: 0.95rem;
+    margin: 0 10px;
+  }
+
+  /* Formulario */
+  form {
+    padding: 0 15px;
+    margin: 20px auto;
+  }
+
+  form input,
+  form textarea {
+    font-size: 0.95rem;
+    padding: 0.6rem;
+  }
+
+  form button {
+    width: 140px;
+    padding: 0.6rem;
+    font-size: 0.95rem;
+  }
+
+  /* Footer */
+  footer {
+    font-size: 0.85rem;
+    padding: 12px;
+  }
+
+  /* Subtítulos y títulos */
+  .subtitle {
+    font-size: 1.5rem;
+    margin: 30px 15px 15px 15px;
+    gap: 6px;
+  }
+
+  .title-container {
+    padding: 15px;
+    max-width: 95%;
+    margin: 30px auto;
+  }
+
+  .text-about-me {
+    padding: 0 20px;
+    font-size: 0.95rem;
+    margin: 25px 0 20px 0;
+  }
+
+  .title-container p {
+    font-size: 1rem;
+  }
+
+  /* Iconos de tecnologías dentro de cards */
+  .technologies-container li {
+    font-size: 9px;
+    padding: 4px 8px;
+  }
+
+  .technologies-container li img {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+/* Responsive para pantallas ≤ 1024px */
+@media (max-width: 1024px) {
+  /* Navegación */
+  nav ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 10px;
+  }
+
+  nav ul li a.anchor-menu {
+    font-size: 1rem;
+    padding: 6px 10px;
+  }
+
+  /* Imagen principal */
+  .img-container img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 15px 0;
+  }
+
+  /* Nombre y descripción */
+  .my-name {
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 15px;
+  }
+
+  .my-description {
+    font-size: 1.1rem;
+    text-align: center;
+    margin: 10px 20px 20px 20px;
+  }
+
+  /* Botones */
+  .button-group {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .icon-button,
+  .anchor-github {
+    width: 180px;
+    height: 45px;
+    font-size: 1rem;
+  }
+
+  .icon-button img,
+  .anchor-github img {
+    width: 22px;
+    height: 22px;
+  }
+
+  /* Logos / Skills */
+  .logos-wrapper {
+    margin: 40px 0;
+  }
+
+  .logos {
+    width: 80%;
+  }
+
+  .logos-slide img {
+    height: 40px;
+    margin: 0 40px;
+  }
+
+  /* Timeline / Educación */
+  .timeline {
+    width: 90%;
+    padding-left: 15px;
+  }
+
+  .timeline-item .details h3 {
+    font-size: 1.1rem;
+  }
+
+  /* Cards */
+  .card-wrapper {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 250px));
+    gap: 25px;
+    padding: 30px;
+  }
+
+  .project-title {
+    font-size: 1.4rem;
+  }
+
+  .description {
+    font-size: 1rem;
+    margin: 0 15px;
+  }
+
+  /* Formulario */
+  form {
+    padding: 0 20px;
+    margin: 30px auto;
+  }
+
+  form input,
+  form textarea {
+    font-size: 1rem;
+    padding: 0.7rem;
+  }
+
+  form button {
+    width: 160px;
+    padding: 0.7rem;
+    font-size: 1rem;
+  }
+
+  /* Footer */
+  footer {
+    font-size: 0.9rem;
+    padding: 15px;
+  }
+
+  /* Subtítulos y títulos */
+  .subtitle {
+    font-size: 1.7rem;
+    margin: 35px 15px 15px 15px;
+    gap: 8px;
+  }
+
+  .title-container {
+    padding: 15px 15px;
+    max-width: 90%;
+    margin: 35px auto;
+  }
+
+  .text-about-me {
+    padding: 0 25px;
+    font-size: 1rem;
+    margin: 35px 0 25px 0;
+  }
+
+  .title-container p {
+    font-size: 1.1rem;
+  }
+
+  /* Iconos de tecnologías dentro de cards */
+  .technologies-container li {
+    font-size: 10px;
+    padding: 5px 10px;
+  }
+
+  .technologies-container li img {
+    width: 14px;
+    height: 14px;
+  }
+}
