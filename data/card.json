@@ -13,39 +13,5 @@
     ],
     "enlace": "#",
     "repositorio": "https://github.com/Lucas-Perez01/Portfolio"
-  },
-  {
-    "imagen": "../assets/1180423327.jpg",
-    "titulo": "Proyecto 2",
-    "descripcion": "Descripción",
-    "tecnologias": [
-      "../assets/icons/html-5-svgrepo-com.svg",
-      "../assets/icons/css-3-svgrepo-com.svg",
-      "../assets/icons/react-svgrepo-com.svg"
-    ],
-    "enlace": "#"
-  },
-  {
-    "imagen": "../assets/1180423327.jpg",
-    "titulo": "Proyecto 3",
-    "descripcion": "Descripción",
-    "tecnologias": [
-      "../assets/icons/mongo-svgrepo-com.svg",
-      "../assets/icons/express-svgrepo-com.svg",
-      "../assets/icons/react-svgrepo-com.svg",
-      "../assets/icons/nodejs-icon-svgrepo-com.svg"
-    ],
-    "enlace": "#"
-  },
-  {
-    "imagen": "../assets/1180423327.jpg",
-    "titulo": "Proyecto 4",
-    "descripcion": "Descripción",
-    "tecnologias": [
-      "../assets/icons/html-5-svgrepo-com.svg",
-      "../assets/icons/css-3-svgrepo-com.svg",
-      "../assets/icons/javascript-svgrepo-com.svg"
-    ],
-    "enlace": "#"
   }
 ]

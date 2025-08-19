@@ -47,7 +47,7 @@ body {
 
 /* Para que el scroll se posicione correctamente cuando se le hace click a las anchorTags*/
 section {
-  scroll-margin-top: 5rem;
+  scroll-margin-top: 100px;
 }
 
 /* Contenedor de mi imagen*/
@@ -55,7 +55,7 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 35px 0 30px 0;
+  margin: 120px 0 30px 0;
   padding-top: 30px;
 }
 
@@ -107,10 +107,10 @@ section {
 
 /* Grupo de botones: CV, Github, LinkedIN */
 
-/* Contenedor de los botones */
 .button-group {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap; /* se acomodan en mobile */
   gap: 15px;
   margin-top: 20px;
 }
@@ -127,26 +127,32 @@ section {
   border: 2px solid white;
   border-radius: 12px;
   text-decoration: none;
-  transition: transform 0.2s ease, background-color 0.3s ease;
+  transition: transform 0.2s ease, background-color 0.3s ease, color 0.3s ease;
   color: white;
+  font-weight: 500;
+  font-size: 16px;
 }
 
-/* Icono svg de los botones */
+/* Iconos SVG */
 .icon-button img {
-  width: 30px;
-  height: 30px;
+  width: 28px;
+  height: 28px;
 }
 
-/* Icono de Github */
-.github-icon {
+/* GitHub en blanco */
+.github-icon img {
   filter: brightness(0) invert(1);
 }
 
-/* Hover de los botones */
+/* Hover */
 .icon-button:hover {
   transform: translateY(-3px);
   background-color: white;
   color: black;
+}
+
+/* Ajustar iconos en hover */
+.icon-button:hover img {
   filter: none;
 }
 
