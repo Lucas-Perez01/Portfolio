@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 5000;
 // Middlewares
 app.use(
   cors({
-    origin: "http://127.0.0.1:5500", // la URL de tu frontend
+    origin: "https://lucas-perez-portfolio.vercel.app", // la URL de tu frontend
   })
 );
 app.use(express.json());
