@@ -4,14 +4,28 @@ import cors from "cors";
 import dotenv from "dotenv";
 import fetch from "node-fetch"; // para validar reCAPTCHA
 import { z } from "zod";
+import rateLimit from "express-rate-limit"; // <-- importamos
 
 dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 5000;
 
+// Middlewares
 app.use(cors({ origin: "https://lucas-perez-portfolio.vercel.app" }));
 app.use(express.json());
+
+// Rate Limiter para proteger el endpoint de contacto
+const contactLimiter = rateLimit({
+  windowMs: 10 * 60 * 1000, // 10 minutos
+  max: 5, // máximo 5 solicitudes por IP
+  message: {
+    success: false,
+    message: "Has alcanzado el límite de envíos. Intenta nuevamente más tarde.",
+  },
+  standardHeaders: true,
+  legacyHeaders: false,
+});
 
 // Schema Zod para validar el formulario
 const contactSchema = z.object({
@@ -21,7 +35,8 @@ const contactSchema = z.object({
   captchaToken: z.string().min(1),
 });
 
-app.post("/send", async (req, res) => {
+// Ruta para enviar correo con rate limiting
+app.post("/send", contactLimiter, async (req, res) => {
   try {
     // Validamos los datos con Zod
     const { email, asunto, message, captchaToken } = contactSchema.parse(
