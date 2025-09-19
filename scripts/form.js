@@ -2,64 +2,77 @@ import express from "express";
 import nodemailer from "nodemailer";
 import cors from "cors";
 import dotenv from "dotenv";
+import fetch from "node-fetch"; // para validar reCAPTCHA
+import { z } from "zod";
 
 dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-// Middlewares
-app.use(
-  cors({
-    origin: "https://lucas-perez-portfolio.vercel.app", // la URL de tu frontend
-  })
-);
+app.use(cors({ origin: "https://lucas-perez-portfolio.vercel.app" }));
 app.use(express.json());
 
-// Ruta para enviar correo
-app.post("/send", async (req, res) => {
-  const { email, asunto, message } = req.body;
+// Schema Zod para validar el formulario
+const contactSchema = z.object({
+  email: z.string().email(),
+  asunto: z.string().min(1),
+  message: z.string().min(1),
+  captchaToken: z.string().min(1),
+});
 
+app.post("/send", async (req, res) => {
   try {
-    // Configuración del transporte con Gmail
+    // Validamos los datos con Zod
+    const { email, asunto, message, captchaToken } = contactSchema.parse(
+      req.body
+    );
+
+    // Validar token de reCAPTCHA
+    const verifyUrl = `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.RECAPTCHA_SECRET}&response=${captchaToken}`;
+    const captchaResponse = await fetch(verifyUrl, { method: "POST" });
+    const captchaData = await captchaResponse.json();
+
+    if (!captchaData.success || captchaData.score < 0.5) {
+      return res
+        .status(400)
+        .json({ success: false, message: "Captcha inválido o sospechoso" });
+    }
+
+    // Configuración de Nodemailer
     const transporter = nodemailer.createTransport({
       service: "gmail",
-      auth: {
-        user: process.env.EMAIL_USER, // tu cuenta de Gmail
-        pass: process.env.EMAIL_PASS, // contraseña de aplicación
-      },
+      auth: { user: process.env.EMAIL_USER, pass: process.env.EMAIL_PASS },
     });
 
-    // Opciones del correo
     const mailOptions = {
-      from: `"Portfolio Contact Form" <${process.env.EMAIL_USER}>`, // tu Gmail
-      to: process.env.RECEIVER_EMAIL || process.env.EMAIL_USER, // donde recibís el correo
-      subject: asunto || "Nuevo mensaje desde el formulario",
-      text: `
-Has recibido un nuevo mensaje desde tu portfolio:
-
-De: ${email}
-Asunto: ${asunto}
-Mensaje: 
-${message}
-      `,
-      replyTo: email, // <--- este es el truco: responderá al usuario
+      from: `"Portfolio Contact Form" <${process.env.EMAIL_USER}>`,
+      to: process.env.RECEIVER_EMAIL || process.env.EMAIL_USER,
+      subject: asunto,
+      text: `Has recibido un nuevo mensaje desde tu portfolio:\n\nDe: ${email}\nAsunto: ${asunto}\nMensaje:\n${message}`,
+      replyTo: email,
     };
 
-    // Enviar correo
     await transporter.sendMail(mailOptions);
 
     res
       .status(200)
       .json({ success: true, message: "Correo enviado con éxito ✅" });
-  } catch (error) {
-    console.error("Error en la conexión con el servidor de correo:", error);
+  } catch (err) {
+    if (err instanceof z.ZodError) {
+      return res.status(400).json({
+        success: false,
+        message: "Datos inválidos ❌",
+        errors: err.errors,
+      });
+    }
+    console.error(err);
     res
       .status(500)
       .json({ success: false, message: "Error al enviar correo ❌" });
   }
 });
 
-app.listen(PORT, () => {
-  console.log(`Servidor corriendo en http://localhost:${PORT}`);
-});
+app.listen(PORT, () =>
+  console.log(`Servidor corriendo en http://localhost:${PORT}`)
+);

@@ -13,5 +13,28 @@
     ],
     "enlace": "#",
     "repositorio": "https://github.com/Lucas-Perez01/Portfolio"
+  },
+  {
+    "imagen": "../assets/Pomodoro-project-image.png",
+    "titulo": "Pomodoro Timer",
+    "descripcion": "Aplicación web de temporizador Pomodoro desarrollada con HTML5, CSS3 y JavaScript. Permite a los usuarios gestionar sus sesiones de trabajo y descansos.",
+    "tecnologias": [
+      { "icon": "../assets/icons/html-5-svgrepo-com.svg", "nombre": "HTML5" },
+      { "icon": "../assets/icons/css-3-svgrepo-com.svg", "nombre": "CSS3" },
+      {
+        "icon": "../assets/icons/javascript-svgrepo-com.svg",
+        "nombre": "JavaScript"
+      },
+      {
+        "icon": "../assets/icons/nodejs-icon-svgrepo-com.svg",
+        "nombre": "Node.js"
+      },
+      {
+        "icon": "../assets/icons/expressjs.svg",
+        "nombre": "Express.js"
+      }
+    ],
+    "enlace": "https://pomodoro-timer-vmci.onrender.com",
+    "repositorio": "https://github.com/Lucas-Perez01/Pomodoro-project"
   }
 ]

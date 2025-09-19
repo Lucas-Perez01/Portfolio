@@ -18,6 +18,7 @@
   overflow: hidden;
   background-color: var(--primary-color);
   transition: box-shadow 0.3s ease, border-color 0.5s ease;
+  height: 100%;
 }
 
 /* Hover de la card */
@@ -76,6 +77,7 @@
 .text-container {
   padding: 20px;
   text-align: center;
+  flex-grow: 1;
 }
 
 /* Titulo del proyecto */
@@ -104,6 +106,10 @@
   padding: 0 0 15px 0;
   background-color: var(--primary-color);
   width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .technologies-container ul {
