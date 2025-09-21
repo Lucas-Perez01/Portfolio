@@ -12,7 +12,27 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // Middlewares
-app.use(cors({ origin: "https://lucas-perez-portfolio.vercel.app" }));
+const allowedOrigins = [
+  "https://lucas-perez-portfolio.vercel.app",
+  "http://127.0.0.1:5500", // Agrega tu dirección de desarrollo local
+  "http://localhost:5500", // Si usas localhost en lugar de 127.0.0.1
+];
+
+app.use(
+  cors({
+    origin: function (origin, callback) {
+      // Permite solicitudes sin origen (como las de Postman o curl)
+      if (!origin) return callback(null, true);
+      if (allowedOrigins.indexOf(origin) === -1) {
+        const msg =
+          "La política de CORS para este sitio no permite el acceso desde el origen especificado.";
+        return callback(new Error(msg), false);
+      }
+      return callback(null, true);
+    },
+  })
+);
+
 app.use(express.json());
 
 const contactLimiter = rateLimit({
