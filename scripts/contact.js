@@ -7,11 +7,12 @@ contactForm.addEventListener("submit", async (e) => {
   const asunto = document.getElementById("asunto").value;
   const message = document.getElementById("message").value;
 
-  // Obtener token de Google reCAPTCHA
-  const captchaToken = await grecaptcha.execute(
-    "6LeHBM8rAAAAADinv6NSfp4buUH4BWhPpZlxo0lC",
-    { action: "submit" }
-  );
+  const captchaToken = grecaptcha.getResponse();
+
+  if (!captchaToken) {
+    alert("Por favor completa el captcha ❌");
+    return;
+  }
 
   try {
     const response = await fetch("https://portfolio-yavp.onrender.com/send", {
@@ -25,6 +26,7 @@ contactForm.addEventListener("submit", async (e) => {
     if (data.success) {
       alert("Correo enviado con éxito ✅");
       contactForm.reset();
+      grecaptcha.reset();
     } else {
       alert(data.message || "Error al enviar el correo ❌");
     }

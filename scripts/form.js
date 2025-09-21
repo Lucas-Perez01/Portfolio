@@ -2,9 +2,9 @@ import express from "express";
 import nodemailer from "nodemailer";
 import cors from "cors";
 import dotenv from "dotenv";
-import fetch from "node-fetch"; // para validar reCAPTCHA
+import fetch from "node-fetch";
 import { z } from "zod";
-import rateLimit from "express-rate-limit"; // <-- importamos
+import rateLimit from "express-rate-limit";
 
 dotenv.config();
 
@@ -15,10 +15,9 @@ const PORT = process.env.PORT || 5000;
 app.use(cors({ origin: "https://lucas-perez-portfolio.vercel.app" }));
 app.use(express.json());
 
-// Rate Limiter para proteger el endpoint de contacto
 const contactLimiter = rateLimit({
-  windowMs: 10 * 60 * 1000, // 10 minutos
-  max: 5, // máximo 5 solicitudes por IP
+  windowMs: 10 * 60 * 1000,
+  max: 5,
   message: {
     success: false,
     message: "Has alcanzado el límite de envíos. Intenta nuevamente más tarde.",
@@ -27,7 +26,6 @@ const contactLimiter = rateLimit({
   legacyHeaders: false,
 });
 
-// Schema Zod para validar el formulario
 const contactSchema = z.object({
   email: z.string().email(),
   asunto: z.string().min(1),
@@ -35,26 +33,23 @@ const contactSchema = z.object({
   captchaToken: z.string().min(1),
 });
 
-// Ruta para enviar correo con rate limiting
+// Ruta para enviar correo
 app.post("/send", contactLimiter, async (req, res) => {
   try {
-    // Validamos los datos con Zod
     const { email, asunto, message, captchaToken } = contactSchema.parse(
       req.body
     );
 
-    // Validar token de reCAPTCHA
     const verifyUrl = `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.RECAPTCHA_SECRET}&response=${captchaToken}`;
     const captchaResponse = await fetch(verifyUrl, { method: "POST" });
     const captchaData = await captchaResponse.json();
 
-    if (!captchaData.success || captchaData.score < 0.5) {
+    if (!captchaData.success) {
       return res
         .status(400)
-        .json({ success: false, message: "Captcha inválido o sospechoso" });
+        .json({ success: false, message: "Captcha inválido ❌" });
     }
 
-    // Configuración de Nodemailer
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: { user: process.env.EMAIL_USER, pass: process.env.EMAIL_PASS },
